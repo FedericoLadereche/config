@@ -1,0 +1,28 @@
+# Application Configuration
+server:
+  port: 8091
+
+spring:
+  application:
+    name: mobile_backend
+
+# =============================================
+# DB
+# =============================================
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb
+    username: root
+    password: root
+
+# =============================================
+# JPA / HIBERNATE 
+# =============================================
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} ${LOG_LEVEL_PATTERN:-%5p} %m%n"
